@@ -1,0 +1,322 @@
+/* ===== INK SCROLL — Japanese Ink Painting Theme ===== */
+:root {
+    --bg: #f5f0e8;
+    --bg-card: #fffdf7;
+    --ink: #2a2a2a;
+    --ink-light: #5a5a5a;
+    --ink-muted: #999;
+    --vermillion: #c53d43;
+    --gold: #b8860b;
+    --border: #d8d0c4;
+    --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    --font-serif: 'Noto Serif JP', serif;
+    --font-sans: 'Noto Sans JP', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+a {
+    color: var(--vermillion);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--gold);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+/* Header */
+.scroll-header {
+    border-bottom: 2px solid var(--ink);
+}
+
+.scroll-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scroll-logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.05em;
+}
+
+.scroll-nav {
+    display: flex;
+    gap: 24px;
+}
+
+.scroll-nav a {
+    color: var(--ink-light);
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+.scroll-nav a:hover {
+    color: var(--vermillion);
+}
+
+/* Hero */
+.ink-hero {
+    text-align: center;
+    padding: 80px 20px 48px;
+    position: relative;
+}
+
+.ink-circle {
+    width: 120px;
+    height: 120px;
+    border: 3px solid var(--ink);
+    border-radius: 50%;
+    margin: 0 auto 24px;
+    opacity: 0.15;
+}
+
+.ink-hero h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.03em;
+}
+
+.ink-hero p {
+    color: var(--ink-light);
+    font-size: 1rem;
+    max-width: 480px;
+    margin: 12px auto 0;
+}
+
+/* Feed */
+.ink-feed {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 28px;
+}
+
+.ink-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.ink-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-3px);
+}
+
+.ink-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.ink-body {
+    padding: 16px;
+}
+
+.ink-body time {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+}
+
+.ink-body h3 {
+    font-family: var(--font-serif);
+    font-size: 1.05rem;
+    line-height: 1.4;
+    margin: 8px 0;
+}
+
+.ink-body h3 a {
+    color: var(--ink);
+}
+
+.ink-body h3 a:hover {
+    color: var(--vermillion);
+}
+
+.ink-body p {
+    color: var(--ink-light);
+    font-size: 0.85rem;
+}
+
+/* Single */
+.ink-single {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+}
+
+.ink-single header {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.ink-single header time {
+    color: var(--ink-muted);
+    font-size: 0.82rem;
+}
+
+.ink-single header h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(1.5rem, 4vw, 2.2rem);
+    line-height: 1.3;
+    margin: 10px 0;
+}
+
+.ink-tags {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.ink-tags span {
+    border: 1px solid var(--border);
+    padding: 2px 12px;
+    font-size: 0.75rem;
+    color: var(--ink-light);
+}
+
+.ink-hero-img {
+    margin: 0 0 32px;
+    box-shadow: var(--shadow);
+}
+
+.ink-content {
+    font-size: 1.02rem;
+    line-height: 1.9;
+}
+
+.ink-content h2 {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    color: var(--ink);
+    margin: 40px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--vermillion);
+}
+
+.ink-content h3 {
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    margin: 30px 0 12px;
+}
+
+.ink-content p {
+    margin-bottom: 20px;
+}
+
+.ink-content ul,
+.ink-content ol {
+    margin: 0 0 20px 24px;
+}
+
+.ink-content li {
+    margin-bottom: 8px;
+}
+
+.ink-content a {
+    color: var(--vermillion);
+    border-bottom: 1px solid transparent;
+}
+
+.ink-content a:hover {
+    border-bottom-color: var(--vermillion);
+}
+
+.ink-content blockquote {
+    border-left: 3px solid var(--vermillion);
+    padding: 14px 20px;
+    margin: 24px 0;
+    background: rgba(197, 61, 67, 0.04);
+    color: var(--ink-light);
+    font-style: italic;
+}
+
+.ink-content img {
+    margin: 24px 0;
+    box-shadow: var(--shadow);
+}
+
+.ink-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 2px solid var(--ink);
+    font-size: 0.88rem;
+}
+
+.scroll-footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 28px 20px;
+    border-top: 2px solid var(--ink);
+    text-align: center;
+}
+
+.scroll-footer p {
+    color: var(--ink-muted);
+    font-size: 0.82rem;
+}
+
+.pagination {
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.pagination a {
+    padding: 6px 14px;
+    border: 1px solid var(--border);
+    color: var(--ink-light);
+    font-size: 0.85rem;
+}
+
+.pagination a:hover {
+    border-color: var(--vermillion);
+    color: var(--vermillion);
+}
+
+@media (max-width:640px) {
+    .ink-feed {
+        grid-template-columns: 1fr;
+    }
+
+    .scroll-inner {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
