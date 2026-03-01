@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="ink-hero">
+    <div class="ink-circle"></div>
+    <h1>{{ .Site.Title }}</h1>
+    <p>{{ .Site.Params.description }}</p>
+</section>
+<section class="ink-feed">
+    {{ range first 12 (where .Site.RegularPages "Section" "posts") }}
+    <article class="ink-card">
+        {{ with .Params.image }}<img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">{{ end }}
+        <div class="ink-body">
+            <time>{{ .Date.Format "2006年01月02日" }}</time>
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <p>{{ .Summary | truncate 100 }}</p>
+        </div>
+    </article>
+    {{ end }}
+</section>
+{{ end }}
