@@ -1,0 +1,16 @@
+{{ define "main" }}
+<section class="ink-feed">
+    <h1 style="grid-column:1/-1; font-family:'Noto Serif JP',serif; font-size:1.6rem; color:#2a2a2a;">{{ .Title |
+        default "全記事" }}</h1>
+    {{ range .Paginator.Pages }}
+    <article class="ink-card">
+        {{ with .Params.image }}<img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">{{ end }}
+        <div class="ink-body">
+            <time>{{ .Date.Format "2006年01月02日" }}</time>
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        </div>
+    </article>
+    {{ end }}
+    {{ template "_internal/pagination.html" . }}
+</section>
+{{ end }}
