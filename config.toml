@@ -1,15 +1,21 @@
 baseURL = "https://example.com/"
 languageCode = "en-us"
 title = "ZenScroll Media"
-paginate = 10
 enableRobotsTXT = true
+
+[pagination]
+  pagerSize = 10
+
 [params]
   description = "Zen approach to media reviews"
   author = "ZenScroll Media Team"
+
 [outputs]
   home = ["HTML", "RSS"]
+
 [sitemap]
   changefreq = "daily"
   priority = 0.8
+
 [markup.goldmark.renderer]
   unsafe = true
